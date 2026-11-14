@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Beep Boops — First episode Fri Nov 20</title>
-  <meta name="description" content="Beep Boops: three friends from the theatre arguing about AI, technology and what it means to be human. First episode Friday, November 20.">
+  <meta name="description" content="Three friends debate AI and the future of humanity. First episode Friday, November 20.">
   <meta name="theme-color" content="#012332">
   <meta property="og:title" content="Beep Boops">
-  <meta property="og:description" content="First episode Fri Nov 20">
+  <meta property="og:description" content="Three friends debate AI and the future of humanity. First episode Fri Nov 20.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://beepboopspod.com/">
   <link rel="icon" type="image/svg+xml" href="logo.svg">
@@ -19,11 +19,14 @@
       --bg: #012332;
       --cyan: #3cd8ff;
       --yellow: #fff1a3;
+      --text: #cdeef8;
       --glow: rgba(255, 224, 89, 0.5);
     }
     * { box-sizing: border-box; margin: 0; }
-    html, body { height: 100%; }
+    html { min-height: 100%; background: var(--bg); }
     body {
+      min-height: 100vh;
+      min-height: 100svh;
       background: var(--bg);
       color: var(--cyan);
       font-family: "Silkscreen", ui-monospace, Menlo, monospace;
@@ -31,13 +34,13 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: clamp(1.5rem, 4vh, 3rem);
-      padding: 2rem 1.25rem;
+      gap: clamp(1.5rem, 4vh, 2.75rem);
+      padding: clamp(2rem, 6vh, 4rem) 1.25rem;
       text-align: center;
     }
     h1 { line-height: 0; }
     h1 img {
-      width: min(88vw, 620px, 70vh);
+      width: min(84vw, 520px, 52vh);
       height: auto;
     }
     .launch {
@@ -56,6 +59,38 @@
       text-shadow: 0 0 18px var(--glow), 0 0 4px var(--glow);
       letter-spacing: 0.06em;
     }
+    .about {
+      max-width: 36rem;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: clamp(1rem, 2.4vw, 1.15rem);
+      line-height: 1.6;
+      color: var(--text);
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.9rem;
+      list-style: none;
+      padding: 0;
+    }
+    .links a {
+      display: inline-block;
+      padding: 0.7rem 1.3rem;
+      border: 2px solid var(--cyan);
+      color: var(--cyan);
+      text-decoration: none;
+      letter-spacing: 0.12em;
+      font-size: 0.95rem;
+      transition: color 0.15s, border-color 0.15s, box-shadow 0.15s;
+    }
+    .links a:hover,
+    .links a:focus-visible {
+      color: var(--yellow);
+      border-color: var(--yellow);
+      box-shadow: 0 0 14px var(--glow);
+      outline: none;
+    }
   </style>
 </head>
 <body>
@@ -64,5 +99,10 @@
     <span class="label">First Episode</span>
     <time class="date" datetime="2026-11-20">Fri Nov 20</time>
   </p>
+  <p class="about">Three friends debate AI and the future of humanity. Dennis believes AI is going to save the world, Brad thinks it's an existential disaster, and Blake Lee is caught in the middle. Beep Boops is a show about consciousness, culture, technology, capitalism and what it means to be human while we careen toward a wild new world.</p>
+  <ul class="links" aria-label="Beep Boops elsewhere">
+    <li><a href="https://www.instagram.com/beepboopspod/" rel="me noopener" target="_blank">Instagram</a></li>
+    <li><a href="https://www.youtube.com/@beepboopspod" rel="me noopener" target="_blank">YouTube</a></li>
+  </ul>
 </body>
 </html>
