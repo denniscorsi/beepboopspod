@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Beep Boops — First episode Fri Nov 20</title>
-  <meta name="description" content="Three friends debate AI and the future of humanity. First episode Friday, November 20.">
+  <title>Beep Boops — Three friends debate AI and the future of humanity</title>
+  <meta name="description" content="Three friends debate AI and the future of humanity. New episodes every other Friday.">
   <meta name="theme-color" content="#012332">
   <meta property="og:title" content="Beep Boops">
-  <meta property="og:description" content="Three friends debate AI and the future of humanity. First episode Fri Nov 20.">
+  <meta property="og:description" content="Three friends debate AI and the future of humanity. New episodes every other Friday.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://beepboopspod.com/">
   <meta property="og:image" content="https://beepboopspod.com/og-image.jpg">
@@ -51,6 +51,7 @@
     .launch {
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 0.6rem;
     }
     .launch .label {
@@ -63,6 +64,20 @@
       color: var(--yellow);
       text-shadow: 0 0 18px var(--glow), 0 0 4px var(--glow);
       letter-spacing: 0.06em;
+    }
+    .launch .episode {
+      max-width: 15ch;
+      font-size: clamp(1.6rem, 6.5vw, 3rem);
+      line-height: 1.15;
+      color: var(--yellow);
+      text-shadow: 0 0 18px var(--glow), 0 0 4px var(--glow);
+      letter-spacing: 0.06em;
+    }
+    .launch .cadence {
+      font-size: clamp(0.75rem, 2vw, 0.9rem);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text);
     }
     .about {
       max-width: 36rem;
@@ -101,8 +116,9 @@
 <body>
   <h1><img src="title.svg" alt="Beep Boops" width="1163" height="983"></h1>
   <p class="launch">
-    <span class="label">First Episode</span>
-    <time class="date" datetime="2026-11-20">Fri Nov 20</time>
+    <span class="label">Latest Episode · EP 01</span>
+    <span class="episode">70% Chance of Apocalypse</span>
+    <span class="cadence">New episodes every other Friday</span>
   </p>
   <p class="about">Three friends debate AI and the future of humanity. Dennis believes AI is going to save the world, Brad thinks it's an existential disaster, and Blake Lee is caught in the middle. Beep Boops is a show about consciousness, culture, technology, capitalism and what it means to be human while we careen toward a wild new world.</p>
   <ul class="links" aria-label="Beep Boops elsewhere">
