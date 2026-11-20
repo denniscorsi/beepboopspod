@@ -48,32 +48,54 @@
       width: min(84vw, 520px, 52vh);
       height: auto;
     }
-    .launch {
+    .latest {
+      width: min(100%, 40rem);
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.9rem;
+      padding: clamp(1.5rem, 4vw, 2.25rem) clamp(1rem, 4vw, 2.5rem);
+      border: 2px solid var(--yellow);
+      background: rgba(255, 241, 163, 0.04);
+      box-shadow: 0 0 22px rgba(255, 224, 89, 0.18), inset 0 0 22px rgba(255, 224, 89, 0.06);
     }
-    .launch .label {
+    .latest .label {
       font-size: clamp(0.85rem, 2.4vw, 1.1rem);
       letter-spacing: 0.3em;
       text-transform: uppercase;
     }
-    .launch .date {
-      font-size: clamp(2rem, 8vw, 3.75rem);
-      color: var(--yellow);
-      text-shadow: 0 0 18px var(--glow), 0 0 4px var(--glow);
-      letter-spacing: 0.06em;
-    }
-    .launch .episode {
+    .latest .episode {
       max-width: 15ch;
+      font-family: inherit;
+      font-weight: normal;
       font-size: clamp(1.6rem, 6.5vw, 3rem);
       line-height: 1.15;
       color: var(--yellow);
       text-shadow: 0 0 18px var(--glow), 0 0 4px var(--glow);
       letter-spacing: 0.06em;
     }
-    .launch .cadence {
+    .latest .links {
+      margin-top: 0.4rem;
+      width: min(100%, 20rem);
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.7rem;
+    }
+    .latest .links a {
+      display: block;
+      padding: 0.7rem 1rem;
+      border-color: var(--yellow);
+      color: var(--yellow);
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+    .latest .links a:hover,
+    .latest .links a:focus-visible {
+      background: var(--yellow);
+      color: var(--bg);
+    }
+    .cadence {
       font-size: clamp(0.75rem, 2vw, 0.9rem);
       letter-spacing: 0.2em;
       text-transform: uppercase;
@@ -115,11 +137,16 @@
 </head>
 <body>
   <h1><img src="title.svg" alt="Beep Boops" width="1163" height="983"></h1>
-  <p class="launch">
-    <span class="label">Latest Episode · EP 01</span>
-    <span class="episode">70% Chance of Apocalypse</span>
-    <span class="cadence">New episodes every other Friday</span>
-  </p>
+  <section class="latest" aria-labelledby="latest-title">
+    <p class="label">Latest Episode · EP 01</p>
+    <h2 class="episode" id="latest-title">70% Chance of Apocalypse</h2>
+    <ul class="links" aria-label="Listen to the latest episode">
+      <li><a href="https://youtu.be/trUWGrYXVSI" rel="noopener" target="_blank">Watch on YouTube</a></li>
+      <li><a href="https://open.spotify.com/episode/3HB4vNTimj4wCmarigq8BW" rel="noopener" target="_blank">Listen on Spotify</a></li>
+      <li><a href="https://podcasts.apple.com/us/podcast/beep-boops/id6835131270" rel="noopener" target="_blank">Listen on Apple Podcasts</a></li>
+    </ul>
+  </section>
+  <p class="cadence">New episodes every other Friday</p>
   <p class="about">Three friends debate AI and the future of humanity. Dennis believes AI is going to save the world, Brad thinks it's an existential disaster, and Blake Lee is caught in the middle. Beep Boops is a show about consciousness, culture, technology, capitalism and what it means to be human while we careen toward a wild new world.</p>
   <ul class="links" aria-label="Beep Boops elsewhere">
     <li><a href="https://podcasts.apple.com/us/podcast/beep-boops/id6835131270" rel="noopener" target="_blank">Apple Podcasts</a></li>
